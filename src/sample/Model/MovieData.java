@@ -2,7 +2,7 @@ package sample.Model;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import sample.DBWrapper.DBConn;
+
 
 /**
  * Created by blackhatt on 19/09/2017.
@@ -17,8 +17,8 @@ public class MovieData {
     }
 
     public void loadList() {
-        DBConn dbConn = new DBConn();
-        movieList = dbConn.getAllMovies();
-        dbConn = null;
+//        DBConn dbConn = new DBConn();
+//        movieList = dbConn.getAllMovies();
+//        dbConn = null;
     }
 }
