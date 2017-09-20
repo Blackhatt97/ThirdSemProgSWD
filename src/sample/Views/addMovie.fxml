@@ -30,7 +30,7 @@
         </columns>
       </TableView>
       <Label layoutX="462.0" layoutY="142.0" text="Existing Movies:" />
-      <Button layoutX="456.0" layoutY="416.0" mnemonicParsing="false" text="Load all movies" />
+      <Button layoutX="456.0" layoutY="416.0" mnemonicParsing="false" onAction="#onLoadMoviesBtnPressed" text="Load all movies" />
       <Button layoutX="607.0" layoutY="459.0" mnemonicParsing="false" onAction="#onUpdateBtnPressed" prefHeight="27.0" prefWidth="73.0" text="Update" />
    </children>
 </AnchorPane>

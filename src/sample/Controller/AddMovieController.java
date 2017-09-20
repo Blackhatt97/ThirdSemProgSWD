@@ -44,6 +44,10 @@ public class AddMovieController implements Initializable {
         updateWorkScreen("/sample/Views/main.fxml");
     }
 
+    public void onLoadMoviesBtnPressed(ActionEvent actionEvent) {
+
+    }
+
     public void onUpdateBtnPressed(ActionEvent actionEvent) {
 
     }
