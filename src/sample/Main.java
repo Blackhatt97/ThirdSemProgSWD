@@ -5,6 +5,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import sample.DBWrapper.MovieWrapper;
+import sample.Model.Movie;
 
 public class Main extends Application {
 
@@ -18,6 +20,12 @@ public class Main extends Application {
 
 
     public static void main(String[] args) {
+
         launch(args);
+        MovieWrapper mw = new MovieWrapper();
+        System.out.println(mw.getAllMovies().toString());
+
     }
+
+    //testcommentz
 }

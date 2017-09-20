@@ -5,19 +5,19 @@ import java.util.ArrayList;
 public class Movie {
 
     private int ageRestriction;
-    private String name;
-    private String info;
-    private double time;
+    private String title;
+    private String description;
+    private int duration;
     private String actors;
 
     private ArrayList<Movie> movies = new ArrayList<>();
 
-    public Movie(int ageRestriction, String name, String info, double time,String actors) {
+    public Movie(String title, String description, int ageRestriction, String actors, int duration) {
 
         this.ageRestriction = ageRestriction;
-        this.name = name;
-        this.info = info;
-        this.time = time;
+        this.title = title;
+        this.description = description;
+        this.duration = duration;
         this.actors = actors;
 
     }
@@ -34,40 +34,34 @@ public class Movie {
 
     }
 
-    public String getName() {
-
-        return name;
-
+    public String getTitle()
+    {
+        return title;
     }
 
-    public void setName(String name) {
-
-        this.name = name;
-
+    public void setTitle(String title)
+    {
+        this.title = title;
     }
 
-    public String getInfo() {
-
-        return info;
-
+    public String getDescription()
+    {
+        return description;
     }
 
-    public void setInfo(String info) {
-
-        this.info = info;
-
+    public void setDescription(String description)
+    {
+        this.description = description;
     }
 
-    public double getTime() {
-
-        return time;
-
+    public int getDuration()
+    {
+        return duration;
     }
 
-    public void setTime(double time) {
-
-        this.time = time;
-
+    public void setDuration(int duration)
+    {
+        this.duration = duration;
     }
 
     public ArrayList<Movie> getMovies() {
@@ -106,7 +100,7 @@ public class Movie {
 
         for (Movie movie :movies) {
 
-            if(movie.getName().equals(name)){
+            if(movie.getTitle().equals(name)){
 
                 find = movie;
 
@@ -118,5 +112,12 @@ public class Movie {
 
     }
 
-
+    @Override
+    public String toString()
+    {
+        return "Movie{" +
+                "title='" + title + '\'' +
+                ", description='" + description + '\'' +
+                '}';
+    }
 }
