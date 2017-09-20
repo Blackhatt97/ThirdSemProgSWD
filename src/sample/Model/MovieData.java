@@ -15,10 +15,10 @@ public class MovieData {
     public ObservableList<Movie> getMovieList() {
         return movieList;
     }
-
-    public void loadList() {
-        DBConn dbConn = new DBConn();
-        movieList = dbConn.getAllMovies();
-        dbConn = null;
-    }
+//
+//    public void loadList() {
+//        DBConn dbConn = new DBConn();
+//        movieList = dbConn.getAllMovies();
+//        dbConn = null;
+//    }
 }
