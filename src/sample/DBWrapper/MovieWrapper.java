@@ -46,43 +46,45 @@ public class MovieWrapper
 
         return moviesOL;
     }
-//    public Movie getMovie(int id) {
-//
-//        conn = DB.getConn();
-//
-//        String sqlTxt = "SELECT * FROM " + TABLE +
-//                " WHERE `id` = '" + id + "';";
-//
-//        try
-//        {
-//            PreparedStatement prepStmt =
-//                    conn.prepareStatement(sqlTxt);
-//
-//            ResultSet rs = prepStmt.executeQuery();
-//
-//            if (!rs.next())
-//            {
-//                return null;
-//            }
-//
-//            String title = rs.getString("title");
-//            String description = rs.getString("description");
-//            int age = rs.getInt("age_restriction");
-//            String actors = rs.getString("actors");
-//            int duration = rs.getInt("duration");
-//
-//            prepStmt.close();
-//
-//            return new Movie(
-//                    title, description, age, actors, duration);
-//        }
-//        catch (SQLException e)
-//        {
-//            e.printStackTrace();
-//            return null;
-//        }
-//
-//
-//    }
+
+
+    public Movie getMovie(int id) {
+
+        DBConn dbConn = new DBConn();
+        conn = dbConn.getConn();
+
+        String sqlTxt = "SELECT * FROM " + TABLE +
+                " WHERE `id` = '" + id + "';";
+
+        try
+        {
+            PreparedStatement prepStmt =
+                    conn.prepareStatement(sqlTxt);
+
+            ResultSet rs = prepStmt.executeQuery();
+
+            if (!rs.next())
+            {
+                return null;
+            }
+
+            String title = rs.getString("title");
+            String description = rs.getString("description");
+            int age = rs.getInt("age_restriction");
+            String actors = rs.getString("actors");
+            int duration = rs.getInt("duration");
+
+            prepStmt.close();
+
+            return new Movie(title, description, age, actors, duration);
+        }
+        catch (SQLException e)
+        {
+            e.printStackTrace();
+            return null;
+        }
+
+
+    }
 
 }
