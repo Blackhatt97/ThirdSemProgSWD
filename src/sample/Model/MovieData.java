@@ -18,7 +18,7 @@ public class MovieData {
 
     public void loadList() {
         DBConn dbConn = new DBConn();
-        movieList = dbConn.getAllMovies();
+        //movieList = dbConn.getAllMovies();
         dbConn = null;
     }
 }
