@@ -1,14 +1,10 @@
 
-package sample.Model;
+package sample.DBWrapper;
 import sample.Model.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.util.Pair;
 
 import java.sql.*;
-import java.sql.Date;
-import java.time.LocalDate;
-import java.util.*;
 
 public class DBConn {
 
@@ -34,24 +30,4 @@ public class DBConn {
 
     }
 
-    public ObservableList<Movie> getAllMovies() {
-
-        ObservableList<Movie> moviesOL = FXCollections.observableArrayList();
-        String sql = "SELECT * FROM movies";
-
-        try {
-            Connection connection = getConn();
-            PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            ResultSet resultSet = preparedStatement.executeQuery();
-//            while (resultSet.next()) {
-//                Movie movie = new Movie(resultSet.getInt);
-//                moviesOL.add(movie);
-//            }
-            connection.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-
-        return moviesOL;
-    }
 }
