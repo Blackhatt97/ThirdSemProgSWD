@@ -8,7 +8,7 @@ import java.sql.*;
 
 public class DBConn {
 
-    private final String URL = "jdbc:mysql://kinoxp.cezz2j7x3idi.eu-west-2.rds.amazonaws.com:3306";
+    private final String URL = "jdbc:mysql://kinoxp.cezz2j7x3idi.eu-west-2.rds.amazonaws.com:3306/";
     private final String DB_NAME = "kinoXP";
     private final String USER = "anthelopes";
     private final String PASS = "anthelopes123";
