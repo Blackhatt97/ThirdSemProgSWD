@@ -26,4 +26,6 @@ public class Main extends Application {
         System.out.println(mw.getAllMovies().toString());
 
     }
+
+    //testcomment
 }
